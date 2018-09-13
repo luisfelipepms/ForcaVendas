@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "230012611868",
+    "firebase_url": "https://forcavendas-804f8.firebaseio.com",
+    "project_id": "forcavendas-804f8",
+    "storage_bucket": "forcavendas-804f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230012611868:android:46bf9e839c4f983e",
+        "android_client_info": {
+          "package_name": "com.example.lfpms.forcavendas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230012611868-h50h5a72p1pj28iv2g1ld4mkhfom6m4g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lfpms.forcavendas",
+            "certificate_hash": "be4aed0298e541a229af09ab1a79b2e8a37403c1"
+          }
+        },
+        {
+          "client_id": "230012611868-76daqdcbtq0i1bg1ir3pjnb396jumn6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIOXN2ZIZYLKJzQjGlL9s-DgCK4WSoVy4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230012611868-76daqdcbtq0i1bg1ir3pjnb396jumn6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
