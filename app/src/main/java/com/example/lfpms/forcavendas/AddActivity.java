@@ -1,5 +1,7 @@
 package com.example.lfpms.forcavendas;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,7 @@ public class AddActivity extends AppCompatActivity {
 
     private DatabaseReference mDatabase, demo;
     private Venda venda;
+    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,24 @@ public class AddActivity extends AppCompatActivity {
         final EditText edt_valor = (EditText)findViewById(R.id.txtValor);
         final Spinner spn_tipo = (Spinner)findViewById(R.id.spnTipo);
         Button btn_salvar = (Button)findViewById(R.id.btnSalvar);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Venda");
+        builder.setMessage("Confirmar venda?");
+        builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                venda = new Venda(edt_descricao.getText().toString(), Float.valueOf(edt_valor.getText().toString()), edt_data.getText().toString(), spn_tipo.getSelectedItem().toString());
+                demo.push().setValue(venda);
+                finish();
+            }
+        });
+        builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                alerta.dismiss();
+            }
+        });
+        alerta = builder.create();
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -38,12 +59,8 @@ public class AddActivity extends AppCompatActivity {
         btn_salvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                venda = new Venda(edt_descricao.getText().toString(), Float.valueOf(edt_valor.getText().toString()), edt_data.getText().toString(), spn_tipo.getSelectedItem().toString());
-                demo.push().setValue(venda);
+                alerta.show();
             }
         });
-
-
-
     }
 }
