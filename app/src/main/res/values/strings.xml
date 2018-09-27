@@ -19,4 +19,9 @@
     <string name="valor">Valor: R$</string>
     <string name="data">Data</string>
     <string name="salvar">Salvar</string>
+
+    <!--Erros-->
+    <string name="errodescricao">Insira uma descrição</string>
+    <string name="errovalor">Insira um valor valido</string>
+    <string name="errodata">Insira uma data valida</string>
 </resources>
