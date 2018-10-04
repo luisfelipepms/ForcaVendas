@@ -2,6 +2,8 @@ package com.example.lfpms.forcavendas;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 
+import java.util.Map;
+
 @IgnoreExtraProperties
 public class Venda {
     private String descricao;
@@ -50,4 +52,7 @@ public class Venda {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+
+
 }

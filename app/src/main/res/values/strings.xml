@@ -24,4 +24,5 @@
     <string name="errodescricao">Insira uma descrição</string>
     <string name="errovalor">Insira um valor valido</string>
     <string name="errodata">Insira uma data valida</string>
+    <string name="tipo">Tipo</string>
 </resources>

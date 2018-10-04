@@ -76,7 +76,7 @@ public class AddActivity extends AppCompatActivity {
 
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        edt_data.setHint(sdf.format(new Date()));
+        edt_data.setText(sdf.format(new Date()));
 
 
 
